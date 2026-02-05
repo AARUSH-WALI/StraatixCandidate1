@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Straatix Partners Brand - Deep Navy */
+    --background: 210 40% 98%;
+    --foreground: 215 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 12%;
+
+    /* Primary: Straatix Navy */
+    --primary: 215 55% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary: Light Navy */
+    --secondary: 215 30% 94%;
+    --secondary-foreground: 215 55% 15%;
+
+    /* Muted */
+    --muted: 215 25% 95%;
+    --muted-foreground: 215 20% 50%;
+
+    /* Accent: Warm Gold */
+    --accent: 38 80% 55%;
+    --accent-foreground: 215 55% 15%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success */
+    --success: 160 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 215 25% 90%;
+    --input: 215 25% 90%;
+    --ring: 215 55% 15%;
+
+    --radius: 0.5rem;
+
+    /* Custom brand colors */
+    --navy-deep: 215 55% 15%;
+    --navy-medium: 215 45% 25%;
+    --navy-light: 215 35% 40%;
+    --gold-primary: 38 80% 55%;
+    --gold-light: 42 90% 70%;
+    --slate-50: 210 40% 98%;
+    --slate-100: 215 30% 94%;
+    --slate-200: 215 25% 88%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 55% 15%) 0%, hsl(215 45% 25%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 80% 55%) 0%, hsl(42 90% 60%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 30% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(15 39 68 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(15 39 68 / 0.08), 0 2px 4px -2px rgb(15 39 68 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(15 39 68 / 0.08), 0 4px 6px -4px rgb(15 39 68 / 0.05);
+    --shadow-xl: 0 20px 25px -5px rgb(15 39 68 / 0.1), 0 8px 10px -6px rgb(15 39 68 / 0.05);
+    --shadow-card: 0 2px 8px -2px rgb(15 39 68 / 0.08), 0 4px 16px -4px rgb(15 39 68 / 0.06);
+    --shadow-card-hover: 0 8px 24px -4px rgb(15 39 68 / 0.12), 0 4px 12px -4px rgb(15 39 68 / 0.08);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 215 35% 25%;
+    --sidebar-primary: 215 55% 15%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 30% 94%;
+    --sidebar-accent-foreground: 215 55% 15%;
+    --sidebar-border: 215 25% 90%;
+    --sidebar-ring: 215 55% 15%;
+  }
+
+  .dark {
+    --background: 215 45% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 40% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 40% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 215 55% 15%;
+
+    --secondary: 215 35% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 35% 18%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 38 80% 55%;
+    --accent-foreground: 215 55% 15%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 35% 20%;
+    --input: 215 35% 20%;
+    --ring: 210 40% 70%;
+
+    --sidebar-background: 215 40% 10%;
+    --sidebar-foreground: 215 20% 75%;
+    --sidebar-primary: 38 80% 55%;
+    --sidebar-primary-foreground: 215 55% 15%;
+    --sidebar-accent: 215 35% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 35% 18%;
+    --sidebar-ring: 38 80% 55%;
+
+    /* Dark mode custom brand colors */
+    --navy-deep: 215 45% 8%;
+    --navy-medium: 215 40% 15%;
+    --navy-light: 215 35% 25%;
+    --gold-primary: 38 80% 55%;
+    --gold-light: 42 90% 70%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 45% 8%) 0%, hsl(215 40% 15%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(215 40% 12%) 0%, hsl(215 35% 10%) 100%);
+
+    /* Dark mode shadows */
+    --shadow-card: 0 2px 8px -2px rgb(0 0 0 / 0.3), 0 4px 16px -4px rgb(0 0 0 / 0.25);
+    --shadow-card-hover: 0 8px 24px -4px rgb(0 0 0 / 0.4), 0 4px 12px -4px rgb(0 0 0 / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .page-transition {
+    @apply animate-fade-in;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
